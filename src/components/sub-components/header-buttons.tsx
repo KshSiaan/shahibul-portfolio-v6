@@ -3,8 +3,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FileUserIcon, Gamepad2Icon } from "lucide-react";
 import { useRouter } from "next/navigation";
 // import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function HeaderButtons() {
+  const { toast } = useToast();
   const navig = useRouter();
   return (
     <div className="w-full h-[200px] grid grid-cols-2 divide-x-2 divide-primary">
@@ -57,6 +59,13 @@ export default function HeaderButtons() {
               y: 0,
               scale: 1,
               opacity: 0,
+            }}
+            onClick={() => {
+              toast({
+                title: "Feature Coming Soon!",
+                description:
+                  "I'm still working on this feature. Stay tuned for updates!",
+              });
             }}
             animate={{ x: 0, rotateX: 0, rotateY: 0, opacity: 1 }}
             whileHover={{ y: -4, rotateY: 20, skewX: 10 }}

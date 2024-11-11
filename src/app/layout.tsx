@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Navig from "@/components/navig";
-// import { Metadata } from "next";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "Shahibul Hasan - Web Developer & Designer Portfolio",
@@ -15,15 +15,15 @@ export const metadata = {
     description:
       "Showcasing Shahibul Hasan's projects, skills, and expertise in web development, including animations with Framer Motion.",
     type: "website",
-    url: "https://your-portfolio-domain.com",
-    image: "https://your-portfolio-domain.com/icon.png",
+    url: "https://shahibul-hasan.vercel.app",
+    image: "https://shahibul-hasan.vercel.app/icon.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Shahibul Hasan - Web Developer & Designer",
     description:
       "Explore Shahibul Hasan's portfolio, featuring cutting-edge web development projects.",
-    image: "https://your-portfolio-domain.com/icon.png",
+    image: "https://shahibul-hasan.vercel.app/icon.png",
   },
 };
 
@@ -50,6 +50,7 @@ export default function RootLayout({
               <Navig />
             </header>
             {children}
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>

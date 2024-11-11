@@ -31,6 +31,11 @@ export default function Page() {
           />
           <input
             type="text"
+            placeholder="Your email (Optional - to reply back)"
+            className="w-full py-2 px-4 bg-transparent border-b-2 border-primary"
+          />
+          <input
+            type="text"
             placeholder="Subject (Optional)"
             className="w-full py-2 px-4 bg-transparent border-b-2 border-primary"
           />
@@ -39,6 +44,11 @@ export default function Page() {
             className="w-full py-2 px-4 bg-background border-2 border-primary resize-none"
             placeholder="Your Message"
           />
+          <p className="text-right text-muted-foreground">
+            Note: Your message will be sent directly to me via the admin
+            dashboard of my portfolio.
+          </p>
+
           <div className="w-full flex flex-row justify-center items-center">
             <button className="py-2 px-4 border-2 border-dashed border-primary shadow-black shadow-md active:shadow-none">
               Send Message
